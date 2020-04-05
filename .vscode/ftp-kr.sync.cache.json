@@ -1,0 +1,63 @@
+{
+  "ftp://ftp.h910230154.nichost.ru:21@h910230154_rso": {
+    "app": {
+      "bd.php": {
+        "type": "-",
+        "size": 423,
+        "lmtime": 0,
+        "modified": false
+      },
+      "index.php": {
+        "type": "-",
+        "size": 423,
+        "lmtime": 0,
+        "modified": false
+      },
+      "jquery-main.js": {
+        "type": "-",
+        "size": 88166,
+        "lmtime": 0,
+        "modified": false
+      },
+      "main.js": {
+        "type": "-",
+        "size": 4774,
+        "lmtime": 0,
+        "modified": false
+      }
+    },
+    "bd.php": {
+      "type": "-",
+      "size": 4150,
+      "lmtime": 0,
+      "modified": true
+    },
+    "css": {},
+    ".htaccess": {
+      "type": "-",
+      "size": 136,
+      "lmtime": 0,
+      "modified": false
+    },
+    "img": {},
+    "index.html": {
+      "type": "-",
+      "size": 1027,
+      "lmtime": 0,
+      "modified": true
+    },
+    "numpadTest.html": {
+      "type": "-",
+      "size": 1689,
+      "lmtime": 0,
+      "modified": false
+    },
+    "print.php": {
+      "type": "-",
+      "size": 1615,
+      "lmtime": 0,
+      "modified": true
+    }
+  },
+  "$version": 1
+}

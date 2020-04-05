@@ -1,7 +1,6 @@
-﻿function createModal(modalType) {
+function createModal(modalType) {
   modal = "modal_" + modalType;
   var text = f;
-
   function f(modalType) {
     var text_f = null;
     if (modal == "modal_enter") {
@@ -11,9 +10,7 @@
     }
     return text_f;
   }
-
   var text2 = g;
-
   function g(modalType) {
     var text_g = null;
     if (modal == "modal_enter") {
@@ -43,21 +40,20 @@
     ">" +
     '<input id="cancel_submit" class="input_form exit" type="submit" name="submit" value="Отменить" onclick="cancelFirstModal()">' +
     '<div id="result_enter"></div>' +
-    "</div>";
+    '<div id="containerPad"></div>' +
+    "</div></div>";
   document.getElementById(text2()).focus();
-} 
-
+  createNumPad();
+}
 function cancelFirstModal() {
   document.getElementById("modal_enter").remove();
 }
-
 function cancelSecModal() {
   document.getElementById("temporary").remove();
 }
 function cancelModalAlert() {
-  document.getElementById('modal_alert').remove()
+  document.getElementById("modal_alert").remove();
 }
-
 function writeRegister() {
   var employeNumWrite = document.getElementById("enter_input").value;
   requestDataWrite = $.ajax({
@@ -65,15 +61,14 @@ function writeRegister() {
     url: "http://isinfo.h910230154.nichost.ru/bd.php",
     dataType: "json",
     data: { id_card_write: employeNumWrite },
-    success: function(data) {
+    success: function (data) {
       var result = data;
       createAlertModal(result);
       cancelSecModal();
       cancelFirstModal();
-    }
+    },
   });
 }
-
 function writeRegisterExit() {
   var employeNumWrite = document.getElementById("exit_input").value;
   requestDataWrite = $.ajax({
@@ -81,15 +76,14 @@ function writeRegisterExit() {
     url: "http://isinfo.h910230154.nichost.ru/bd.php",
     dataType: "json",
     data: { id_card_write_exit: employeNumWrite },
-    success: function(data) {
+    success: function (data) {
       var result = data;
       createAlertModal(result);
       cancelSecModal();
       cancelFirstModal();
-    }
+    },
   });
 }
-
 function checkData(checkData) {
   var typeOfSend = checkData.id;
   if (typeOfSend == "enter_input") {
@@ -99,7 +93,7 @@ function checkData(checkData) {
       url: "http://isinfo.h910230154.nichost.ru/bd.php",
       dataType: "json",
       data: { id_card: employeNum },
-      success: function(data) {
+      success: function (data) {
         var username = data;
         if (username != null) {
           f = username.first_name;
@@ -122,11 +116,12 @@ function checkData(checkData) {
             "</div>" +
             "</div>";
         } else {
-          var answerNoCard = "Данный номер отсутствует в системе. Обратитесь к работникам КПП" 
-          createAlertModal(answerNoCard)
-          document.getElementById("enter_input").value = null
+          var answerNoCard =
+            "Данный номер отсутствует в системе. Обратитесь к работникам КПП";
+          createAlertModal(answerNoCard);
+          document.getElementById("enter_input").value = null;
         }
-      }
+      },
     });
   } else {
     employeNum = checkData.value;
@@ -135,7 +130,7 @@ function checkData(checkData) {
       url: "http://isinfo.h910230154.nichost.ru/bd.php",
       dataType: "json",
       data: { id_card: employeNum },
-      success: function(data) {
+      success: function (data) {
         var username = data;
         if (username != null) {
           f = username.first_name;
@@ -158,22 +153,48 @@ function checkData(checkData) {
             "</div>" +
             "</div>";
         } else {
-          var answerNoCard = "Данный номер отсутствует в системе. Обратитесь к работникам КПП" 
-          createAlertModal(answerNoCard)
-          document.getElementById("enter_input").value = null
+          var answerNoCard =
+            "Данный номер отсутствует в системе. Обратитесь к работникам КПП";
+          createAlertModal(answerNoCard);
+          document.getElementById("enter_input").value = null;
         }
-      }
+      },
     });
   }
 }
-
 function createAlertModal(text) {
-  var container = document.getElementById('container')
-  container.innerHTML = 
-  '<div id="modal_alert" class="modal_alert">' +
-  '<div class="darker" style="width: 50vw">'+
-  '<h1>'+ text + '</h1>'+
-  '<input id="enter_submit" class="input_form enter" type="submit" name="submit" value="Ок" onclick="cancelModalAlert()">'+
-  "</div>"+
-  "</div>";
+  var container = document.getElementById("container");
+  container.innerHTML =
+    '<div id="modal_alert" class="modal_alert">' +
+    '<div class="darker" style="width: 50vw">' +
+    "<h1>" +
+    text +
+    "</h1>" +
+    '<input id="enter_submit" class="input_form enter" type="submit" name="submit" value="Ок" onclick="cancelModalAlert()">' +
+    "</div>" +
+    "</div>";
+}
+function createNumPad() {
+  var container = document.getElementById("containerPad");
+  container.innerHTML =
+    '<div id="containerNum">' +
+    '<ul id="keyboard">' +
+    '<li id="1" onclick="numPadClick(this.id)" class="letter">1</li>  ' +
+    '<li id="2" onclick="numPadClick(this.id)" class="letter">2</li>  ' +
+    '<li id="3" onclick="numPadClick(this.id)" class="letter">3</li>  ' +
+    '<li id="4" onclick="numPadClick(this.id)" class="letter clearl">4</li>  ' +
+    '<li id="5" onclick="numPadClick(this.id)" class="letter">5</li>  ' +
+    '<li id="6" onclick="numPadClick(this.id)" class="letter">6</li> ' +
+    '<li id="7" onclick="numPadClick(this.id)" class="letter clearl">7</li>  ' +
+    '<li id="8" onclick="numPadClick(this.id)" class="letter">8</li>  ' +
+    '<li id="9" onclick="numPadClick(this.id)" class="letter">9</li> ' +
+    '<li id="0" onclick="numPadClick(this.id)" class="letter clearl">0</li>' +
+    '<li id="back" onclick="numPadClick(this.id)" class="letter backsp">очистить</li></ul></div>';
+}
+function numPadClick(id) {
+  if (id == "back") {
+    document.querySelector("input").value = "";
+  } else {
+    document.querySelector("input").value += id;
+  }
 }
