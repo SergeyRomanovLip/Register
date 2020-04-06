@@ -28,7 +28,7 @@
     },
     "bd.php": {
       "type": "-",
-      "size": 4150,
+      "size": 4102,
       "lmtime": 0,
       "modified": true
     },
@@ -48,13 +48,13 @@
     },
     "numpadTest.html": {
       "type": "-",
-      "size": 1689,
+      "size": 1037,
       "lmtime": 0,
-      "modified": false
+      "modified": true
     },
     "print.php": {
       "type": "-",
-      "size": 1615,
+      "size": 2057,
       "lmtime": 0,
       "modified": true
     }

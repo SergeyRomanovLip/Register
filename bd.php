@@ -80,8 +80,7 @@ function getOutPlant(){
     global $time;
     global $date;
     global $dateNoFormat;
-    $dateNoFormat=$dateNoFormat;
-    $dateNoFormatYest = $dateNoFormat-5500;
+    global $dateNoFormatYest;
     $query = "SELECT max(id) FROM Registrator WHERE id_card = '$id_card' AND Timein_noform BETWEEN '$dateNoFormatYest' AND '$dateNoFormat'";
     $sql = mysqli_query($link, $query) or die(mysqli_error($link));
     $result = mysqli_fetch_row($sql);
