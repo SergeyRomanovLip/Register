@@ -10,7 +10,7 @@
 	<h2>Сотрудники ООО "ЛУБД" находящиеся на предприятии в данный момент</h2>
 	<p>Всего - <?php countVisitorsToday ($link, $date); ?> человек</p>
 	<button onclick="print()">Печать</button>
-	<button style="background: rgb(20,255,20);" onClick='location.href="http://isinfo.h910230154.nichost.ru/"'>НА ГЛАВНУЮ </button>
+	<button style="background: rgb(20,255,20);" onClick='location.href="http://isinfo.h910230154.nichost.ru/numpadTest.html"'>НА ГЛАВНУЮ </button>
 	<div class="table">
 	<table>
 	<tr>
