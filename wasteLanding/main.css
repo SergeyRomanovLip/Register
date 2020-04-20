@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36pt;
+  color: white;
+}
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30pt;
+  color:white;
+}
+
+a{
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+	color: rgba(0, 56, 85, 1);
+  align-self: center;
+  display: block;
+}
+
+body {
+  background-color: white;
+  transition: all 1s ease-in-out;
+}
+
+
+
+.containeer { 
+  height: 100vh;
+  background-color: #d9d8d0;
+}
+.menuHoriz{
+  z-index: 100;
+  position: fixed;
+  width: 100vw;
+  height: 110px; 
+  transition: all .3s ease-in-out;
+  background-color: rgba(225, 224, 214, 1);
+}
+.menuHoriz.active{
+  background-color: rgba(225, 224, 214, 0.5);
+}
+.lineMenu {
+  top: 15px;
+  left: 10vw;
+  position: fixed;
+  width: 80vw;
+  height: 80px; 
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+  list-style-type: none;
+}
+.lineMenuEl{
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 16pt;
+}
+.lineMenuEl.hov:hover a{
+  color: rgba(225, 224, 214, 1);
+}
+.lineMenuEl.hov:hover{
+  background-color: rgba(227, 82, 5, 1);
+}
+.lineMenuEl>img{
+  width: 450px;
+}
+
+.menuVert{
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20vh;
+  left: 10vw;
+  width: 30vw;
+  height: 60vh; 
+  transition: all .3s ease-in-out;
+  
+}
+.columnMenu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: baseline;
+  list-style-type: none;
+  
+}
+.columnMenuEl{
+  width: 30vw;
+  padding: 30px;
+  margin: 10px;
+  text-align: center;
+  font-size: 24pt;
+  -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(225, 224, 214, 1);
+  cursor: pointer;
+}
+.columnMenuEl:hover a{
+  color: rgba(225, 224, 214, 1);
+}
+.columnMenuEl:hover{
+  background-color: rgba(227, 82, 5, 1);
+}
+
+.p1-header{
+  z-index: 2;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 30%;
+}
+
+
+/* Pallet */
+.g {
+  color: rgba(0, 56, 85, 1);
+  color: rgba(227, 82, 5, 1);
+  color: rgba(255, 175, 0, 1);
+  color: rgba(225, 224, 214, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.startPage{
+  height: 100vh;
+  position: relative;
+}
+.secondPage{
+  height: 100vh;
+  position: relative;
+}
+
+.imgFrame{
+  position: absolute;
+  width: 50vw;
+  height: 70vh;
+  top: 15vh;
+  left: 45vw;
+  background-position: center;
+  background-size: cover;
+}

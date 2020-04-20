@@ -54,7 +54,13 @@
     },
     "print.php": {
       "type": "-",
-      "size": 7039,
+      "size": 2203,
+      "lmtime": 0,
+      "modified": true
+    },
+    "qrtest.html": {
+      "type": "-",
+      "size": 699,
       "lmtime": 0,
       "modified": true
     },
@@ -63,7 +69,8 @@
       "size": 655,
       "lmtime": 0,
       "modified": false
-    }
+    },
+    "wasteLanding": {}
   },
   "$version": 1
 }
