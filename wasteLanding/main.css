@@ -2,21 +2,55 @@
   margin: 0;
   padding: 0;
 }
-h1{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 36pt;
-  color: white;
+::-webkit-scrollbar {
+  width: 5px;
 }
-h2{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30pt;
-  color:white;
+::-webkit-scrollbar-track {
+  background: rgba(225, 224, 214, 1);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(227, 82, 5, 1);
+  border-radius: 5px;
+}
+body {
+  font-size: 60%;
+  overflow-x: hidden;
 }
 
-a{
+.pdf {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.pdf > object {
+  top: 110px;
+  bottom: 0px;
+  position: absolute;
+  display: block;
+  width: 100vw;
+}
+embed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 500%;
+  color: white;
+}
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 350%;
+  color: white;
+}
+
+a {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-	color: rgba(0, 56, 85, 1);
+  color: rgba(0, 56, 85, 1);
   align-self: center;
   display: block;
 }
@@ -26,57 +60,77 @@ body {
   transition: all 1s ease-in-out;
 }
 
-
-
-.containeer { 
+.containeer {
   height: 100vh;
   background-color: #d9d8d0;
 }
-.menuHoriz{
-  z-index: 100;
+.descriptListMain > h1 {
+  margin-bottom: 15px;
+}
+.descriptListMain > li {
+  margin-left: 30px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 270%;
+  font-weight: bold;
+  color: rgba(227, 82, 5, 1);
+  list-style-image: url(./src/img/marker.png);
+  text-align: left;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menuHoriz {
+  z-index: 10;
   position: fixed;
   width: 100vw;
-  height: 110px; 
-  transition: all .3s ease-in-out;
+  height: 110px;
+  transition: all 0.3s ease-in-out;
   background-color: rgba(225, 224, 214, 1);
 }
-.menuHoriz.active{
+.menuHoriz.active {
   background-color: rgba(225, 224, 214, 0.5);
 }
 .lineMenu {
   top: 15px;
-  left: 10vw;
+  /* left: 10vw; */
   position: fixed;
-  width: 80vw;
-  height: 80px; 
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+  /* width: 80vw; */
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   list-style-type: none;
 }
-.lineMenuEl{
+.lineMenuEl {
   padding: 15px;
   width: 150px;
   text-align: center;
   -webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-size: 16pt;
 }
-.lineMenuEl.hov:hover a{
+.lineMenuEl.hov:hover a {
   color: rgba(225, 224, 214, 1);
 }
-.lineMenuEl.hov:hover{
+.lineMenuEl.hov:hover {
   background-color: rgba(227, 82, 5, 1);
 }
-.lineMenuEl>img{
+.lineMenuEl > img {
   width: 450px;
 }
+.lineMenuMob {
+  display: none;
+}
 
-.menuVert{
-  z-index: 100;
+.menuVert {
+  z-index: 3;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -84,47 +138,71 @@ body {
   top: 20vh;
   left: 10vw;
   width: 30vw;
-  height: 60vh; 
-  transition: all .3s ease-in-out;
-  
+  height: 60vh;
+  transition: all 0.3s ease-in-out;
 }
 .columnMenu {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
   list-style-type: none;
-  
 }
-.columnMenuEl{
+.columnMenuEl {
+  font-family: Arial, Helvetica, sans-serif;
+  align-self: center;
+  display: block;
   width: 30vw;
   padding: 30px;
   margin: 10px;
   text-align: center;
-  font-size: 24pt;
+  font-size: 350%;
   -webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.columnMenuEl.hov {
+  width: 30vw;
+  padding: 30px;
+  margin: 10px;
+  text-align: center;
+  font-size: 280%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background-color: rgba(225, 224, 214, 1);
   cursor: pointer;
 }
-.columnMenuEl:hover a{
+.columnMenuEl.hov:hover a {
   color: rgba(225, 224, 214, 1);
 }
-.columnMenuEl:hover{
+.columnMenuEl.hov:hover {
   background-color: rgba(227, 82, 5, 1);
 }
 
-.p1-header{
+.p1-header {
+  padding: 2vw 1vw 2vw 3vw;
   z-index: 2;
   position: absolute;
-  top: 30%;
-  left: 5%;
-  width: 30%;
+  top: 15vh;
+  width: 45vw;
+  background-color: rgba(0, 56, 85, 0.3);
 }
-
-
+.p1-list {
+  right: 0;
+  padding: 2vw 1vw 2vw 3vw;
+  z-index: 2;
+  position: absolute;
+  top: 30vh;
+  width: 45vw;
+}
+.imgTalk {
+  position: absolute;
+  top: 35vh;
+  left: 15vw;
+}
 /* Pallet */
 .g {
   color: rgba(0, 56, 85, 1);
@@ -133,18 +211,19 @@ body {
   color: rgba(225, 224, 214, 1);
   color: rgba(255, 255, 255, 1);
 }
-
-
-.startPage{
+.startPage {
+  height: 20vh;
+  position: relative;
+}
+.secondPage {
   height: 100vh;
   position: relative;
 }
-.secondPage{
+.descriptionPage {
   height: 100vh;
   position: relative;
 }
-
-.imgFrame{
+.imgFrame {
   position: absolute;
   width: 50vw;
   height: 70vh;
@@ -152,4 +231,54 @@ body {
   left: 45vw;
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 1023px) {
+  body {
+    font-size: 75%;
+  }
+  .p1-header {
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+  }
+  .p1-header > h2,
+  h1 {
+    margin: 15px 50px;
+  }
+  .p1-list {
+    width: 100vw;
+    text-align: center;
+  }
+  .p1-list > ul {
+    margin: 25px 25px;
+  }
+  .lineMenu {
+    display: none;
+  }
+  .lineMenuMob {
+    display: block;
+    top: 15px;
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+  }
+  .lineMenuElmob {
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 16pt;
+  }
+  .lineMenuElmob > a {
+    font-weight: bolder;
+  }
 }

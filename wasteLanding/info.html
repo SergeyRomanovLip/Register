@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mainInfo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="info" style="position: absolute; z-index: 100; margin-left: 20vw; "></p>
+    <div class="menuHoriz" style="width: 100vw; height: 80px; bottom: 0px;">
+        <ul class="lineMenu" style="bottom: 0px;">
+            <li class="lineMenuEl hov"><a href="#rawpot">Картофель сырой резанный</a></li>
+            <li class="lineMenuEl hov"><a href="#friedpot">Обрезки жаренные</a></li>
+            <li class="lineMenuEl hov"><a href="#dust">Смесь крахмальная</a></li>
+            <li class="lineMenuEl hov"><a href="#mezg">Картофельная мезга</a></li>
+        </ul>
+        <ul class="lineMenuMob">
+            <li class="lineMenuElmob"><a href="#rawpot">Картофель сырой резанный</a></li>
+            <li class="lineMenuElmob"><a href="#friedpot">Обрезки жаренные</a></li>
+            <li class="lineMenuElmob"><a href="#dust">Смесь крахмальная</a></li>
+            <li class="lineMenuElmob"><a href="#mezg">Картофельная мезга</a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="pdf"><object id="pdfEmbed"></object></div>
+</body>
+<script>
+    var rawpot = 'Картофель сырой резанный'
+    var friedpot = 'Обрезки жаренные'
+    var dust = 'Смесь крахмальная'
+    var mezg = 'Картофельная мезга'
+
+    var pdf = "./src/pdf/" + window.location.hash.slice(1) + ".jpg";
+    var linkPdf = document.getElementById("pdfEmbed");
+    linkPdf.innerHTML = "<embed src='" + pdf + "'>"
+
+    var descript = document.getElementById("info")
+    var inf = (window.location.hash.slice(1))
+    descript.innerHTML += ' ' + window[inf]
+
+    function showPdf(pdf) {
+        var pdf = "./src/pdf/" + window.location.hash.slice(1) + ".jpg";
+        var linkPdf = document.getElementById("pdfEmbed");
+        linkPdf.innerHTML = "<img src='" + pdf + "'>"
+
+        var descript = document.getElementById("info")
+        var inf = (window.location.hash.slice(1))
+        descript.innerHTML = ' ' + window[inf]
+    }
+    window.addEventListener("hashchange", showPdf);
+</script>
+
+</html>

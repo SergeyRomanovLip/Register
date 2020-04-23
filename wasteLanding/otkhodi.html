@@ -7,46 +7,85 @@
 </head>
 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 <script src="./src/app.js"></script>
+
 <body>
   <div class="container">
+    <div class="menuHoriz">
+      <ul class="lineMenu">
+        <li class="lineMenuEl"><img src="./src/img/logo.png" alt="" /></li>
+        <li class="lineMenuEl" style="width: 30vw;"></li>
+        <li class="lineMenuEl hov"><a href="#">На главную</a></li>
+        <li class="lineMenuEl hov"><a href="#">О нас</a></li>
+        <li class="lineMenuEl hov"><a href="#">Контакты</a></li>
+        <li class="lineMenuEl hov"><a href="#">Как доехать</a></li>
+      </ul>
+      <ul class="lineMenuMob">
+        <li class="lineMenuElmob"><a href="#">На главную</a></li>
+        <li class="lineMenuElmob"><a href="#">О нас</a></li>
+        <li class="lineMenuElmob"><a href="#">Контакты</a></li>
+        <li class="lineMenuElmob"><a href="#">Как доехать</a></li>
+      </ul>
+    </div>
     <div class="startPage">
-      <div class="menuHoriz">
-        <ul class="lineMenu">
-          <li class="lineMenuEl"><img src="./src/img/logo.png" alt="" /></li>
-          <li class="lineMenuEl" style="width: 30vw;"></li>
-          <li class="lineMenuEl hov"><a href="#">На главную</a></li>
-          <li class="lineMenuEl hov"><a href="#">О нас</a></li>
-          <li class="lineMenuEl hov"><a href="#">Контакты</a></li>
-          <li class="lineMenuEl hov"><a href="#">Как доехать</a></li>
+      <div
+        style="background-image: url(./src/img/plant.jpg); background-position: center; background-size: cover; position: absolute;z-index: 0; height: 50vh; width: 100vw;">
+        <div class="p1-header">
+          <h2>КАТАЛОГ ОТХОДОВ ОТ ПЕРЕРАБОТКИ КАРТОФЕЛЯ</h1><br>
+            <h1>ООО "Лэм Уэстон Белая Дача"
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="descriptionPage">
+    <div
+      style="background-position: center; background-size: cover; position: absolute;z-index: 0; height: 100vh; width: 100vw;">
+      <img class="imgTalk" src="./src/img/talk.png" alt="">
+      <div class="p1-list">
+        <ul class="descriptListMain">
+          <h1 style="color: rgba(227, 82, 5, 1);">О нас:</h1>
+          <li>Совместное предприятие российской и нидерландской компаний Белая Дача и Lamb Weston Meijer</li>
+          <li>Запуск производства в декабре 2017</li>
+          <li>Высшие международные сертификаты качества (BRC, ИСО)</li>
+          <li>Современное производство</li>
+          <li>Полный цикл: от выращивания семян до продаж готовой продукции</li>
+          <li>Производственная мощность до 200 000 тонн готовой продукции в год </li>
         </ul>
       </div>
-      <div style="background-image: url(./src/img/plant.jpg); background-position: center; background-size: cover; position: absolute;z-index: 0; height: 100vh; width: 100vw;">
+    </div>
+  </div>
+
+  <div class="secondPage">
+    <div
+      style="background-position: center; background-size: cover; position: absolute; z-index: 0; height: 100vh; width: 100vw;">
+      <div class="menuVert">
+        <ul class="columnMenu">
+          <li class="columnMenuEl">В процессе переработки образуются отходы:</li>
+          <li id="p1" class="columnMenuEl hov"><a class="columnMenuEla" href="#page3">Картофель сырой резанный</a></li>
+          <li id="p2" class="columnMenuEl hov"><a class="columnMenuEla" href="#page4">Выбракованный картофель</a></li>
+          <li id="p3" class="columnMenuEl hov"><a class="columnMenuEla" href="#page5">Обрезки жаренные</a></li>
+          <li id="p4" class="columnMenuEl hov"><a class="columnMenuEla" href="#page6">Смесь крахмальная</a></li>
+          <li id="p5" class="columnMenuEl hov"><a class="columnMenuEla" href="#page7">Картофельная мезга</a></li>
+        </ul>
       </div>
-      <div class="p1-header">
-        <h2>КАТАЛОГ ОТХОДОВ ОТ ПЕРЕРАБОТКИ КАРТОФЕЛЯ</h1>
-          <br>
-          <h1>ООО "Лэм Уэстон Белая Дача"
-        </h2>
+      <div id="p1k" style="background-image: url(./src/img/menu/p1.jpg); display: none;" class="imgFrame">
+      </div>
+      <div id="p2k" style="background-image: url(./src/img/menu/p2.jpg); display: none;" class="imgFrame">
+      </div>
+      <div id="p3k" style="background-image: url(./src/img/menu/p3.jpg); display: none;" class="imgFrame">
+      </div>
+      <div id="p4k" style="background-image: url(./src/img/menu/p4.jpg); display: none;" class="imgFrame">
+      </div>
+      <div id="p5k" style="background-image: url(./src/img/menu/p5.jpg); display: none;" class="imgFrame">
       </div>
     </div>
-      <div class="secondPage">
-        <div style="background-position: center; background-size: cover; position: absolute; z-index: 0; height: 100vh; width: 100vw;">
-          <div class="menuVert">
-          <ul class="columnMenu">
-            <li id="p1" class="columnMenuEl"><a class="columnMenuEla" href="#">Картофель сырой резанный</a></li>
-            <li id="p2" class="columnMenuEl"><a class="columnMenuEla" href="#">Выбракованный картофель</a></li>
-            <li id="p3" class="columnMenuEl"><a class="columnMenuEla" href="#">Обрезки жаренные</a></li>
-            <li id="p4" class="columnMenuEl"><a class="columnMenuEla" href="#">Смесь крахмальная</a></li>
-            <li id="p5" class="columnMenuEl"><a class="columnMenuEla" href="#">Картофельная мезга</a></li>
-          </ul>
-        </div>
-          <div id="p1k" style="background-image: url(./src/img/menu/p1.jpg);" id="imgFrame" class="imgFrame"></div>
-          <div id="p2k" style="background-image: url(./src/img/menu/p2.jpg);" id="imgFrame" class="imgFrame"></div>
-          <div id="p3k" style="background-image: url(./src/img/menu/p3.jpg);" id="imgFrame" class="imgFrame"></div>
-          <div id="p4k" style="background-image: url(./src/img/menu/p4.jpg);" id="imgFrame" class="imgFrame"></div>
-          <div id="p5k" style="background-image: url(./src/img/menu/p5.jpg);" id="imgFrame" class="imgFrame"></div>      
-      </div>
+  </div>
+  <div class="thirdPage">
+    <div
+      style="background-position: center; background-size: cover; position: absolute; z-index: 0; height: 100vh; width: 100vw;">
+      <h1>Картофель сырой резанный</h1>
     </div>
+  </div>
   </div>
 </body>
 

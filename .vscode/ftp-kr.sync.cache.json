@@ -46,11 +46,18 @@
       "lmtime": 0,
       "modified": true
     },
+    "node_modules": {},
     "numpadTest.html": {
       "type": "-",
       "size": 1037,
       "lmtime": 0,
       "modified": true
+    },
+    "package-lock.json": {
+      "type": "-",
+      "size": 336,
+      "lmtime": 0,
+      "modified": false
     },
     "print.php": {
       "type": "-",
